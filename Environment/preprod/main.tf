@@ -4,6 +4,7 @@ module "rg" {
 }
 
 module "vnet" {
+  depends_on = [ module.rg ]
   source = "../../Modules/azurerm_virtual_network"
   vnets  = var.vnets
 
@@ -22,8 +23,14 @@ module "pips" {
 }
 
 module "vms" {
-  depends_on       = [module.pips, module.subnet]
+  depends_on       = [module.pips, module.subnet,module.NSG]
   source           = "../../Modules/azurerm_virual_machine"
   virtual_machines = var.virtual_machines
+
+}
+module "NSG" {
+  depends_on = [ module.rg ]
+  source = "../../Modules/nsg"
+  nsg = var.nsg
 
 }
