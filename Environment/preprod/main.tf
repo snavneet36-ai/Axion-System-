@@ -22,12 +22,12 @@ module "pips" {
   publicIPs  = var.publicIPs
 }
 
-module "vms" {
-  depends_on       = [module.pips, module.subnet, module.NSG]
-  source           = "../../Modules/azurerm_virual_machine"
-  virtual_machines = var.virtual_machines
+# module "vms" {
+#   depends_on       = [module.pips, module.subnet, module.NSG]
+#   source           = "../../Modules/azurerm_virual_machine"
+#   virtual_machines = var.virtual_machines
 
-}
+# }
 module "NSG" {
   depends_on = [module.rg]
   source     = "../../Modules/nsg"
@@ -36,7 +36,7 @@ module "NSG" {
 }
 
 module "postgresql" {
-  depends_on        = [module.rg,module.subnet]
+  depends_on        = [module.rg, module.subnet]
   source            = "../../Modules/postgresql"
   postgresql_server = var.postgresql_server
 

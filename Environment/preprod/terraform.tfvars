@@ -57,51 +57,51 @@ publicIPs = {
   }
 }
 
-virtual_machines = {
-  vm1 = {
-    vm_name              = "frontend-vm-axion-sandbox-ci-01"
-    resource_group_name  = "rg-axion-sandbox-ci-01"
-    location             = "Central India"
-    vm_size              = "Standard_B2ats_v2"
-    admin_username       = "adminuser1234"
-    admin_password       = "Password12345!"
-    subnet_name          = "frontend-subnet-axion-sandbox-ci-01"
-    virtual_network_name = "vnet-axion-sandbox-c01"
-    nic_name             = "nic-frontend-vm-axion-sandbox-ci-01"
-    pip_name             = "pip-frontend-vm-axion-sandbox-ci-01"
-    nsg_name             = "frontend-nsg-axion-sandbox-ci-01"
-  }
+# virtual_machines = {
+#   vm1 = {
+#     vm_name              = "frontend-vm-axion-sandbox-ci-01"
+#     resource_group_name  = "rg-axion-sandbox-ci-01"
+#     location             = "Central India"
+#     vm_size              = "Standard_B2ats_v2"
+#     admin_username       = "adminuser1234"
+#     admin_password       = "Password12345!"
+#     subnet_name          = "frontend-subnet-axion-sandbox-ci-01"
+#     virtual_network_name = "vnet-axion-sandbox-c01"
+#     nic_name             = "nic-frontend-vm-axion-sandbox-ci-01"
+#     pip_name             = "pip-frontend-vm-axion-sandbox-ci-01"
+#     nsg_name             = "frontend-nsg-axion-sandbox-ci-01"
+#   }
 
-  vm2 = {
-    vm_name              = "backend-vm-axion-sandbox-ci-01"
-    resource_group_name  = "rg-axion-sandbox-ci-01"
-    location             = "Central India"
-    vm_size              = "Standard_B2ats_v2"
-    admin_username       = "adminuser1234"
-    admin_password       = "Password12345!"
-    subnet_name          = "backend-subnet-axion-sandbox-ci-01"
-    virtual_network_name = "vnet-axion-sandbox-c01"
-    nic_name             = "nic-backend-vm-axion-sandbox-ci-01"
-    pip_name             = "pip-backend-vm-axion-sandbox-ci-01"
-    nsg_name             = "backend-nsg-axion-sandbox-ci-01"
+#   vm2 = {
+#     vm_name              = "backend-vm-axion-sandbox-ci-01"
+#     resource_group_name  = "rg-axion-sandbox-ci-01"
+#     location             = "Central India"
+#     vm_size              = "Standard_B2ats_v2"
+#     admin_username       = "adminuser1234"
+#     admin_password       = "Password12345!"
+#     subnet_name          = "backend-subnet-axion-sandbox-ci-01"
+#     virtual_network_name = "vnet-axion-sandbox-c01"
+#     nic_name             = "nic-backend-vm-axion-sandbox-ci-01"
+#     pip_name             = "pip-backend-vm-axion-sandbox-ci-01"
+#     nsg_name             = "backend-nsg-axion-sandbox-ci-01"
 
-  }
+#   }
 
-  # vm3 = {
-  #   vm_name              = "database-vm-axion-sandbox-ci-01"
-  #   resource_group_name  = "rg-axion-sandbox-ci-01"
-  #   location             = "Central India"
-  #   vm_size = "Standard_B2ats_v2"
-  #   admin_username       = "adminuser1234"
-  #   admin_password       = "Password12345!"
-  #   subnet_name          = "database-subnet-axion-sandbox-ci-01"
-  #   virtual_network_name = "vnet-axion-sandbox-c01"
-  #   nic_name             = "nic-database-vm-axion-sandbox-ci-01"
-  #   pip_name             = "pip-database-vm-axion-sandbox-ci-01"
-  #   nsg_name             = "database-nsg-axion-sandbox-ci-01"
-  # }
+# vm3 = {
+#   vm_name              = "database-vm-axion-sandbox-ci-01"
+#   resource_group_name  = "rg-axion-sandbox-ci-01"
+#   location             = "Central India"
+#   vm_size = "Standard_B2ats_v2"
+#   admin_username       = "adminuser1234"
+#   admin_password       = "Password12345!"
+#   subnet_name          = "database-subnet-axion-sandbox-ci-01"
+#   virtual_network_name = "vnet-axion-sandbox-c01"
+#   nic_name             = "nic-database-vm-axion-sandbox-ci-01"
+#   pip_name             = "pip-database-vm-axion-sandbox-ci-01"
+#   nsg_name             = "database-nsg-axion-sandbox-ci-01"
+# }
 
-}
+# }
 nsg = {
   nsg1 = {
     name                = "frontend-nsg-axion-sandbox-ci-01"
@@ -115,19 +115,19 @@ nsg = {
     resource_group_name = "rg-axion-sandbox-ci-01"
   }
 
-  # nsg3 = {
-  #   name                = "database-nsg-axion-sandbox-ci-01"
-  #   location            = "Central India"
-  #   resource_group_name = "rg-axion-sandbox-ci-01"
-  # }
+nsg3 = {
+  name                = "database-nsg-axion-sandbox-ci-01"
+  location            = "Central India"
+  resource_group_name = "rg-axion-sandbox-ci-01"
+}
 }
 
 postgresql_server = {
-    postgres1 ={
-  name                   = "pgsql-axion-sanbox-ci-01"
-  resource_group_name    = "rg-axion-sandbox-ci-01"
-  location               = "Central India"
-  administrator_login    = "pgadminuser"
-  administrator_password = "Password1$"
-}
+  postgres1 = {
+    name                   = "pgsql-axion-sanbox-ci-01"
+    resource_group_name    = "rg-axion-sandbox-ci-01"
+    location               = "Central India"
+    administrator_login    = "pgadminuser"
+    administrator_password = "Password1$"
+  }
 }
