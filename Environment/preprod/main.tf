@@ -34,3 +34,10 @@ module "NSG" {
   nsg        = var.nsg
 
 }
+
+module "postgresql" {
+  depends_on        = [module.rg,module.subnet]
+  source            = "../../Modules/postgresql"
+  postgresql_server = var.postgresql_server
+
+}
